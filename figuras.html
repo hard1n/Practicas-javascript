@@ -4,10 +4,78 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./icofont.css">
         <title>Figuras Geométricas</title>
     </head>
     <body>
-        <h1>Figuras Geométricas</h1>
+        <header class="header">
+            <i class="icofont-mathematical-alt-1 math-icon"></i>
+            <h1>RoboMate</h1>
+        </header>
+        
+        <!-- Taller del curso práctico de JavaScript -->
+
+        <main>
+            <nav class="nav">
+                <i class="icofont-robot"></i>
+                <h2 class="nav__title">¿Qué vamos a calcular el día de hoy?</h2>
+                <button>Geometría</button>
+                <button>Descuentos</button>
+                <button>Estadísticas</button>
+                <button>Analisis</button>
+            </nav>
+
+            <h1>Geometría</h1>
+
+            <section>
+                <!-- Formulario del cuadrado -->
+                <section class="square-form form-container">
+                    <h2>Cuadrado</h2>
+                    <form action="square">
+                        <label for="input-square">¿Cuando miden los lados de tu cuadrado?</label>
+                        <input class="input" id="input-square" type="number" />
+                        <select class="measurement-unit" name="measurement-unit" id="measurement-unit">
+                            <option value="cm">cm</option>
+                            <option value="m">m</option>
+                            <option value="km">km</option>
+                        </select>
+                        <div class="form-container__btn-container">
+                            <button class="button" type="button" onclick="calcularPerimetroCuadrado()">Calcular el perímetro</button>
+                            <button class="button"  type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
+                        </div>
+                        <div class="form-container__result" id="square-result"><p>Resultado</p></div>
+                    </form>
+                </section>
+                <!-- Formulario del triangulo -->
+                <section class="triangle-form form-container">
+                    <h2>Triángulo</h2>
+                    <form action="triangle">
+                        <label for="input-triangle">¿Cuando miden los lados de tu cuadrado?</label>
+                        <input class="input" id="input-triangle" type="number" />
+                        <div class="form-container__btn-container">
+                            <button class="button" type="button" onclick="calcularPerimetroCuadrado()">Calcular el perímetro</button>
+                            <button class="button"  type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
+                        </div>
+                        <div class="form-container__result"><p>Resultado</p></div>
+                    </form>
+                </section>
+                <!-- Formulario del círculo -->
+                <section class="circle-form form-container">
+                    <h2>Círculo</h2>
+                    <form action="circle">
+                        <label for="input-circle">¿Cuando miden los lados de tu cuadrado?</label>
+                        <input class="input" id="input-circle" type="number" />
+                        <div class="form-container__btn-container">
+                            <button class="button" type="button" onclick="calcularPerimetroCuadrado()">Calcular el perímetro</button>
+                            <button class="button"  type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
+                        </div>
+                        <div class="form-container__result"><p>Resultado</p></div>
+                    </form>
+                </section>
+            </section>
+        </main>
+
         <script src="./figuras.js"></script>
     </body>
     </html>
