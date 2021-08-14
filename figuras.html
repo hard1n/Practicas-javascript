@@ -10,68 +10,97 @@
     </head>
     <body>
         <header class="header">
-            <i class="icofont-mathematical-alt-1 math-icon"></i>
-            <h1>RoboMate</h1>
+            <i class="icofont-robot"></i>
+            <div>
+                <i class="icofont-mathematical-alt-1 math-icon"></i>
+                <h1>RoboMate</h1>
+            </div>
         </header>
         
         <!-- Taller del curso práctico de JavaScript -->
 
         <main>
             <nav class="nav">
-                <i class="icofont-robot"></i>
-                <h2 class="nav__title">¿Qué vamos a calcular el día de hoy?</h2>
+                <h2 class="nav__title">¿Qué vamos a calcular hoy?</h2>
                 <button>Geometría</button>
                 <button>Descuentos</button>
                 <button>Estadísticas</button>
                 <button>Analisis</button>
             </nav>
 
-            <h1>Geometría</h1>
-
             <section>
-                <!-- Formulario del cuadrado -->
-                <section class="square-form form-container">
-                    <h2>Cuadrado</h2>
-                    <form action="square">
-                        <label for="input-square">¿Cuando miden los lados de tu cuadrado?</label>
-                        <input class="input" id="input-square" type="number" />
-                        <select class="measurement-unit" name="measurement-unit" id="measurement-unit">
-                            <option value="cm">cm</option>
-                            <option value="m">m</option>
-                            <option value="km">km</option>
-                        </select>
-                        <div class="form-container__btn-container">
-                            <button class="button" type="button" onclick="calcularPerimetroCuadrado()">Calcular el perímetro</button>
-                            <button class="button"  type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
-                        </div>
-                        <div class="form-container__result" id="square-result"><p>Resultado</p></div>
-                    </form>
-                </section>
-                <!-- Formulario del triangulo -->
-                <section class="triangle-form form-container">
-                    <h2>Triángulo</h2>
-                    <form action="triangle">
-                        <label for="input-triangle">¿Cuando miden los lados de tu cuadrado?</label>
-                        <input class="input" id="input-triangle" type="number" />
-                        <div class="form-container__btn-container">
-                            <button class="button" type="button" onclick="calcularPerimetroCuadrado()">Calcular el perímetro</button>
-                            <button class="button"  type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
-                        </div>
-                        <div class="form-container__result"><p>Resultado</p></div>
-                    </form>
-                </section>
-                <!-- Formulario del círculo -->
-                <section class="circle-form form-container">
-                    <h2>Círculo</h2>
-                    <form action="circle">
-                        <label for="input-circle">¿Cuando miden los lados de tu cuadrado?</label>
-                        <input class="input" id="input-circle" type="number" />
-                        <div class="form-container__btn-container">
-                            <button class="button" type="button" onclick="calcularPerimetroCuadrado()">Calcular el perímetro</button>
-                            <button class="button"  type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
-                        </div>
-                        <div class="form-container__result"><p>Resultado</p></div>
-                    </form>
+
+                <h1>Geometría</h1>
+                <section class="geometry">
+                    <!-- Formulario del cuadrado -->
+                    <section class="square-form form-container">
+                        <header class="form-container__header">
+                            <div class="icon-square"></div>
+                            <h2>Cuadrado</h2>
+                        </header>
+                        <form action="square">
+                            <label for="input-square">¿Cuando miden los lados de tu cuadrado?</label>
+                            <input class="input" id="input-square" type="number" />
+                            <select class="measurement-unit" name="measurement-unit" id="measurement-unit">
+                                <option value="cm">cm</option>
+                                <option value="m">m</option>
+                                <option value="km">km</option>
+                            </select>
+                            <div class="form-container__btn-container">
+                                <button class="button" type="button" onclick="calcularPerimetroCuadrado()">Calcular el perímetro</button>
+                                <button class="button"  type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
+                            </div>
+                            <div class="form-container__result" id="square-result"><p>Resultado</p></div>
+                        </form>
+                    </section>
+                    <!-- Formulario del triangulo -->
+                    <section class="triangle-form form-container">
+                        <header class="form-container__header">
+                            <img src="./images/triangle-50x50.png" alt="">
+                            <h2>Triángulo</h2>
+                        </header>
+                        <form action="triangle">
+                            <label for="input-square">¿Cuales son las medidas de tu triángulo?</label>
+                            <fieldset class="fieldset">
+                                <legend>Lado 1</legend>
+                                <input class="input" id="triangle-input-side1" type="number" />
+                            </fieldset>
+                            <fieldset class="fieldset">
+                                <legend>Lado 2</legend>
+                                <input class="input" id="triangle-input-side2" type="number" />
+                            </fieldset>
+                            <fieldset class="fieldset">
+                                <legend>Base</legend>
+                                <input class="input" id="triangle-input-base" type="number" />
+                            </fieldset>
+                            <fieldset class="fieldset">
+                                <legend>Altura</legend>
+                                <input class="input" id="triangle-input-height" type="number" />
+                            </fieldset>
+                            <div class="form-container__btn-container">
+                                <button class="button" type="button" onclick="calcularPerimetroTriangulo()">Calcular el perímetro</button>
+                                <button class="button" type="button" onclick="calcularAreaTriangulo()">Calcular el área</button>
+                                <button class="button" type="button" onclick="calcularAlturaTrianguloIsosceles()">Calcular el altura (triangulo isosceles)</button>
+                            </div>
+                            <div class="form-container__result" id="triangle-result"><p>Resultado</p></div>
+                        </form>
+                    </section>
+                    <!-- Formulario del círculo -->
+                    <section class="circle-form form-container">
+                        <header class="form-container__header">
+                            <div class="icon-circle"></div>
+                            <h2>Círculo</h2>
+                        </header>
+                        <form action="circle">
+                            <label for="input-circle">¿Cuando miden los lados de tu cuadrado?</label>
+                            <input class="input" id="input-circle" type="number" />
+                            <div class="form-container__btn-container">
+                                <button class="button" type="button" onclick="calcularPerimetroCuadrado()">Calcular el perímetro</button>
+                                <button class="button"  type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
+                            </div>
+                            <div class="form-container__result"><p>Resultado</p></div>
+                        </form>
+                    </section>
                 </section>
             </section>
         </main>
